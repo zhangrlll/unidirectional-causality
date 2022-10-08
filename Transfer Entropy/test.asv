@@ -1,0 +1,20 @@
+a = load("5Bins1k1lHeadEye.mat").Data;
+b = sum(sum(a(:,7,:)));
+d = sum(sum(a(:,1,:)));
+c = sum(a(:,7,:));
+
+e = a(:,7,:) - a(:,3,:);
+
+
+acg =  load("AvgAcc.mat").ans; 
+x_size =  size(acg,1);
+y_size =  size(acg,2);
+
+f = reshape(e,1,x_size*y_size) ;
+nucm = reshape(f,y_size,x_size).';
+
+q = containers.Map 
+q('foo') = 1 
+q(' not a var name ') = 2 
+keys(c) 
+values(c) 
